@@ -1,0 +1,161 @@
+/* Default Styles */
+:root{
+
+  /* Colors */
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+
+  /* Typography */
+  --Font-family-h: Manrope;
+  --Font-weight-bold: 700;
+  --Font-weight-reg: 500;
+  --Font-size-p: 13px;
+}
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+/* Reset Styles */
+body{
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Displaying Card In Cneter Of View Port */
+  min-height: 100vh;
+  padding: 1em;
+  font-family: var(--Font-family-h);
+  background-color: var(--Light-Grayish-Blue)
+}
+
+h2{
+  font-size: 1.2rem;
+  color: var(--Very-Dark-Grayish-Blue);
+  line-height:1.5
+}
+
+p{
+  font-size: var(--Font-size-p);
+  color: var(--Desaturated-Dark-Blue);
+  font-weight: var(--Font-weight-reg);
+  line-height: 1.6
+}
+
+span, 
+small{
+  display:block;
+}
+
+a{
+ background-color: var(--Light-Grayish-Blue);
+ width: 38px;
+ height:38px;
+ place-content: center; /* Aligning Content Vertically */
+ text-align: center; /* Aligning Content horizontally */
+ border-radius: 50%;
+ cursor: pointer;
+}
+
+/* Image Styling */
+
+img.mobile{
+  height: 16em;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+#avatar{
+  width:100%;
+  border-radius: 50%
+}
+
+/* Layout */
+.card{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  width:28em;
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+}
+
+.container{
+  padding: 0 2em;
+  display: grid;
+  gap: 2em;
+}
+
+.container-content{
+  display: grid;
+  gap: .8em;
+}
+
+.container-link{
+  display:grid;
+  grid-template-columns: 48px 1fr 38px;
+  gap: 1.2em;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 2em;
+}
+
+/* Font Style & Color */
+.text-light{
+  color: var(--Grayish-Blue)
+}
+
+.text-dark{
+  color: var(--Very-Dark-Grayish-Blue)
+}
+
+.text-bold{
+  font-weight: var(--Font-weight-bold)
+}
+
+.letter-spacing{
+  letter-spacing: 2px;
+}
+
+.uppercase{
+  text-transform: uppercase
+}
+
+p.letter-spacing{
+  font-size: 1.1rem
+}
+
+/* Active State */
+#link-active-state{
+  display: flex;
+  flex-direction : row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  width:100%;
+  height: 100%;
+  background-color: var(--Very-Dark-Grayish-Blue);
+  padding: 2em;
+  display: none;
+  border-radius: 0 0 12px 12px;
+ 
+}
+
+#link-active-state div{
+  display: flex;
+  flex-direction: row;
+  gap:1.4em;
+  align-items: center;
+}
+
+.icon{
+  width:24px;
+  height:24px;
+}
+
+/* Desktop Mode */
