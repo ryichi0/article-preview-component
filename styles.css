@@ -78,7 +78,7 @@ img.mobile{
   display: grid;
   grid-template-columns: 1fr;
   gap: 2em;
-  width:28em;
+  max-width:28em;
   background-color: rgb(255, 255, 255);
   border-radius: 12px;
 }
@@ -99,7 +99,7 @@ img.mobile{
   grid-template-columns: 48px 1fr 38px;
   gap: 1.2em;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   position: relative;
   padding: 0 2em;
 }
