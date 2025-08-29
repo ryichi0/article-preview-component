@@ -78,7 +78,8 @@ img.mobile{
   display: grid;
   grid-template-columns: 1fr;
   gap: 2em;
-  max-width:28em;
+  min-width: 18em;
+  max-width:48em;
   background-color: rgb(255, 255, 255);
   border-radius: 12px;
 }
