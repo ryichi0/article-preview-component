@@ -67,7 +67,9 @@ img.mobile{
   width: 100%;
   object-fit: cover;
   border-radius: 12px 12px 0 0;
+  opacity:100
 }
+
 #avatar{
   width:100%;
   border-radius: 50%
@@ -160,3 +162,17 @@ p.letter-spacing{
 }
 
 /* Desktop Mode */
+@media (min-width:600px) {
+  .card{
+    grid-template-columns: 1fr 1.6fr;
+    gap: 0
+
+  }
+  .container{
+    padding: 2em;
+  }
+  img.mobile{
+    height: 100%;
+    border-radius: 12px 0 0 12px;
+  }
+}
