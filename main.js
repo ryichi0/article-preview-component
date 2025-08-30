@@ -1,8 +1,10 @@
 let shareBtn = document.getElementById('share-btn')
-let links = document.getElementById('link-active-state')
+let links = document.getElementById('active')
 
+console.log(links.style.display = 'none')
 shareBtn.addEventListener('click', displaySharingIcons)
 function displaySharingIcons() {
-  console.log(links)
-  links.style = 'display:flex'
+  if (links.style.display = 'none') {
+    links.style.display = 'flex';
+  }  
 }

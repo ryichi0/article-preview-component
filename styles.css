@@ -60,14 +60,14 @@ a{
  cursor: pointer;
 }
 
-/* Image Styling */
+/* Image & Icon Styling */
 
-img.mobile{
-  height: 16em;
+img.img{
+  /* height: 16em; */
+  height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 12px 12px 0 0;
-  opacity:100
 }
 
 #avatar{
@@ -75,36 +75,9 @@ img.mobile{
   border-radius: 50%
 }
 
-/* Layout */
-.card{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2em;
-  min-width: 18em;
-  max-width:48em;
-  background-color: rgb(255, 255, 255);
-  border-radius: 12px;
-}
-
-.container{
-  padding: 0 2em;
-  display: grid;
-  gap: 2em;
-}
-
-.container-content{
-  display: grid;
-  gap: .8em;
-}
-
-.container-link{
-  display:grid;
-  grid-template-columns: 48px 1fr 38px;
-  gap: 1.2em;
-  justify-content: center;
-  align-items: end;
-  position: relative;
-  padding: 0 2em;
+.icon{
+  width:24px;
+  height:24px;
 }
 
 /* Font Style & Color */
@@ -132,8 +105,46 @@ p.letter-spacing{
   font-size: 1.1rem
 }
 
+/* Layout */
+.card{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 16em 1fr;
+  gap: 2em;
+  min-width: 18em;
+  max-width:48em;
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+}
+
+.container{
+  display: grid;
+  gap: 2em;
+}
+
+.container-content{
+  display: grid;
+  gap: .8em;
+  padding: 0 2em;
+}
+
+.container-link {
+  padding-block-end: 1.4em;
+  position: relative;
+}
+
+.container-link #deactive{
+  display:grid;
+  grid-template-columns: 48px 1fr 38px;
+  gap: 1.2em;
+  justify-content: center;
+  align-items: end;
+  position: relative;
+  padding: 0 2em;
+}
+
 /* Active State */
-#link-active-state{
+#active{
   display: flex;
   flex-direction : row;
   justify-content: space-between;
@@ -146,33 +157,55 @@ p.letter-spacing{
   padding: 2em;
   display: none;
   border-radius: 0 0 12px 12px;
- 
 }
 
-#link-active-state div{
+#active div{
   display: flex;
   flex-direction: row;
-  gap:1.4em;
-  align-items: center;
-}
-
-.icon{
-  width:24px;
-  height:24px;
+  gap: 1em;
 }
 
 /* Desktop Mode */
 @media (min-width:600px) {
+
+  body{
+    position: relative;
+  }
   .card{
     grid-template-columns: 1fr 1.6fr;
+    grid-template-rows: 1fr;
     gap: 0
+  }
 
-  }
   .container{
-    padding: 2em;
+    padding: 2em 0 0 0 ;
   }
-  img.mobile{
-    height: 100%;
+
+  img.img{
     border-radius: 12px 0 0 12px;
   }
+  
+  #active{
+    border-radius: 12px;
+    /* transform: translateX(50px) translatey(-70px); */
+    justify-content: center;
+    width: 250px;
+    inset: -5em -4.5em auto auto;
+  }
+
+  #active::after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    position: absolute;
+    bottom: -5px;
+    rotate: 45deg
+
+  }
+
+  #active a{
+    display: none;
+  }
+
 }
